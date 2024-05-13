@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="stylesheetlogin.css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/peperslogo.png">
+    
+
+    <title>Sign Up</title>
+
+</head>
+<body>
+    
+    <div class="container">
+        <div class="forms">
+            <div class="form login">
+                <span class="title">Registration</span>
+
+                <form onsubmit="check();">
+                    <div class="input-field">
+                        <input type="text" placeholder="First Name" required>
+                        <i class="uil uil-user"></i>
+                    </div>
+
+                    <div class="input-field">
+                        <input type="text" placeholder="Last Name" required>
+                        <i class="uil uil-user"></i>
+                    </div>
+
+                    <div class="input-field">
+                        <input name="email" type="email" placeholder="Enter your email" required>
+                        <i class="uil uil-envelope"></i>
+                    </div>
+
+                    <div class="input-field">
+                        <input type="password" id="password" placeholder="Enter your password" required>
+                        <i class="uil uil-lock icon"></i>
+                        <i class="uil uil-eye-slash showHidePw"></i>
+                    </div>
+
+                    <div class="input-field">
+                        <input type="password" id="confirm_password" placeholder="Confirm your password" required>
+                        <i class="uil uil-lock icon"></i>
+                        <i class="uil uil-eye-slash showHidePw"></i>
+                        <span id='message'></span>
+                    </div>
+
+                    <div class="input-field">
+                        <input type="text" placeholder="Country" required>
+                        <i class="uil uil-globe"></i>
+                    </div>
+
+                    <div class="input-field button">
+                        <input type="Submit" value="Sign Up">
+                    </div>
+                </form>
+
+                <script>
+                    function check() {
+                        var pass = document.getElementById("password").value;
+                        var cpass = document.getElementById("confirm_password").value;
+            
+                        if(pass == cpass) {
+                            alert("Registration Succeded")
+                            window.location.replace = "login.html";
+                        }
+                        else {
+                            alert("Password does not match, try again!")
+                        }
+                    }
+                </script>
+
+                <div class="login-signup">
+                    <span class="text">Return to 
+                        <a href="index.html" class="text signup text">Menu</a>
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
